@@ -20,11 +20,11 @@ MyPage/
 └─ README.md     项目说明
 
 ## 访问方式
-本项目已开启 Gitee Pages，可通过公开链接访问。
+本项目已开启 GitHub Pages，可通过公开链接访问。
 
 ## 页面公开访问方式
-1.  将项目上传至 Gitee 公开仓库
-2.  开启 Gitee Pages 服务
+1.  将项目上传至 GitHub 公开仓库
+2.  开启 GitHub Pages 服务
 3.  通过生成的公开链接访问
 
 ## 体现“软件作品”而非单个页面的核心点
