@@ -14,9 +14,13 @@
 
 ## 文件结构
 MyPage/
+
 ├─ index.html    主页
+
 ├─ style.css     样式文件
+
 ├─ images/       图片资源
+
 └─ README.md     项目说明
 
 ## 访问方式
