@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  background: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* 主容器：恢复原尺寸，仅保留排版优化 */
+.card-container {
+  background: white;
+  width: 90%; /* 恢复原90%宽度 */
+  max-width: 850px; /* 恢复原850px最大宽度 */
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(0,102,204,0.08);
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 左侧信息区：核心调整 - 增加顶部内边距，内容下移 */
+.info-panel {
+  width: 60%; /* 恢复原60%宽度 */
+  padding: 60px 40px 45px; /* 顶部内边距从45px→60px，内容下移，左右/底部保留原尺寸 */
+  background: #f0f7ff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* 移除垂直居中，靠顶部内边距控制下移 */
+}
+
+.info-panel > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* 姓名：恢复原尺寸，仅保留间距优化 */
+.name {
+  font-size: 32px; /* 恢复原32px字号 */
+  margin-bottom: 8px; /* 恢复原8px间距 */
+  color: #0066cc;
+  letter-spacing: 1px; /* 恢复原1px字间距 */
+  background: linear-gradient(90deg, #0066cc, #0088cc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 学号/专业：恢复原尺寸 */
+.number, .major {
+  color: #6c757d;
+  margin-bottom: 6px; /* 恢复原6px间距 */
+  font-size: 15px; /* 恢复原15px字号 */
+}
+
+/* 签名：恢复原尺寸 */
+.signature {
+  font-family: "Ma Shan Zheng", cursive;
+  color: #0088cc;
+  font-size: 22px; /* 恢复原22px字号 */
+  margin: 20px 0 25px; /* 恢复原间距 */
+  padding-left: 8px;
+  border-left: 4px solid #0066cc;
+}
+
+/* 自我介绍：恢复原尺寸，仅保留行高优化（更易读） */
+.info {
+  text-align: left;
+  line-height: 1.8; /* 恢复原1.8行高 */
+  color: #495057;
+  margin: 20px 0; /* 恢复原20px上下间距 */
+  background: white;
+  padding: 20px; /* 恢复原20px内边距 */
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-size: 14px; /* 恢复原14px字号 */
+}
+
+/* 联系方式：恢复原样式，保留贴底 */
+.contact {
+  margin-top: auto; /* 贴到底部，视觉平衡 */
+  color: #6c757d;
+  font-size: 15px;
+}
+
+.gitee-link {
+  display: inline-block;
+  color: white;
+  background: #0066cc;
+  padding: 8px 20px; /* 恢复原8px/20px padding */
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 10px; /* 恢复原10px间距 */
+  transition: all 0.3s;
+  font-size: 14px; /* 恢复原14px字号 */
+}
+
+.gitee-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,102,204,0.2);
+  background: #0088cc;
+}
+
+/* 右侧视觉区：完全保留原尺寸，仅优化间距 */
+.visual-panel {
+  width: 40%; /* 恢复原40%宽度 */
+  padding: 40px 25px; /* 恢复原内边距 */
+  background: #f5f9ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px; /* 恢复原25px间距 */
+}
+
+/* 头像：恢复原尺寸 */
+.avatar img {
+  width: 160px; /* 恢复原160px尺寸 */
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #e8f4f8;
+  box-shadow: 0 6px 20px rgba(0,102,204,0.15);
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* 标签容器：恢复原尺寸 */
+.tags-wrap {
+  width: 100%;
+  background: white;
+  padding: 18px; /* 恢复原18px内边距 */
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tags-wrap h3 {
+  font-size: 17px; /* 恢复原17px字号 */
+  margin-bottom: 12px; /* 恢复原12px间距 */
+  color: #0066cc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 标签：恢复原尺寸 */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* 恢复原8px间距 */
+  justify-content: center; /* 保留居中，更美观 */
+}
+
+.tags span {
+  display: inline-block;
+  background: rgba(0,102,204,0.1);
+  color: #0066cc;
+  padding: 7px 14px; /* 恢复原7px/14px padding */
+  border-radius: 25px;
+  margin: 2px;
+  font-size: 14px; /* 恢复原14px字号 */
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+.tags span:hover {
+  background: rgba(0,102,204,0.2);
+  transform: scale(1.1);
+  border-color: #0066cc;
+}
+
+/* 响应式：恢复原适配逻辑 */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+  }
+  .info-panel, .visual-panel {
+    width: 100%;
+  }
+  .info-panel {
+    padding: 40px 35px; /* 手机端恢复原内边距 */
+    justify-content: flex-start;
+  }
+  .visual-panel {
+    padding: 30px 35px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+  .avatar img {
+    width: 120px;
+    height: 120px;
+  }
+  .tags-wrap {
+    width: calc(50% - 10px);
+  }
+}
